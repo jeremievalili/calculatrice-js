@@ -1,1 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculatrice — Projet JS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="calculator-wrapper" role="application" aria-label="Calculatrice">
+    <header class="calc-header">
+      <h1>Calculatrice</h1>
+      <!-- Exemple d'image (facultatif) -->
+      <img src="/mnt/data/04494f4e-23e7-473d-9278-7019d5ab98ce.png" alt="" class="logo" />
+    </header>
+
+    <div class="calculator" id="calculator">
+      <div class="display" id="display" aria-live="polite">0</div>
+
+      <div class="keys">
+        <button class="btn func" data-action="clear" aria-label="Effacer">C</button>
+        <button class="btn func" data-action="back" aria-label="Supprimer">⌫</button>
+        <button class="btn func" data-action="percent" aria-label="Pourcentage">%</button>
+        <button class="btn op" data-value="/">÷</button>
+
+        <button class="btn" data-value="7">7</button>
+        <button class="btn" data-value="8">8</button>
+        <button class="btn" data-value="9">9</button>
+        <button class="btn op" data-value="*">×</button>
+
+        <button class="btn" data-value="4">4</button>
+        <button class="btn" data-value="5">5</button>
+        <button class="btn" data-value="6">6</button>
+        <button class="btn op" data-value="-">−</button>
+
+        <button class="btn" data-value="1">1</button>
+        <button class="btn" data-value="2">2</button>
+        <button class="btn" data-value="3">3</button>
+        <button class="btn op" data-value="+">+</button>
+
+        <button class="btn" data-action="neg">±</button>
+        <button class="btn" data-value="0">0</button>
+        <button class="btn" data-value=".">.</button>
+        <button class="btn equal" data-action="calculate" aria-label="Égal">=</button>
+      </div>
+    </div>
+
+    <footer class="calc-footer">
+      <p>Astuce : utilise ton clavier (0-9, + - * /, Entrée, Backspace)</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
 

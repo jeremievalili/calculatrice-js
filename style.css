@@ -1,1 +1,89 @@
 
+:root{
+  --bg: #0f1720;
+  --card: #0b1220;
+  --accent: #00c3ff;
+  --text: #e6eef8;
+  --muted: #9fb6c9;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, Poppins, system-ui, sans-serif;
+  background: linear-gradient(180deg, #081018, #0f1720);
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+}
+
+/* Wrapper */
+.calculator-wrapper{width:100%;max-width:420px}
+
+/* Header */
+.calc-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:1rem;
+}
+.calc-header h1{font-size:1.1rem;margin:0}
+.logo{width:36px;height:36px;border-radius:6px;object-fit:cover;opacity:0.95}
+
+/* Calculator card */
+.calculator{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
+  border-radius:14px;
+  padding:16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  border:1px solid rgba(255,255,255,0.03);
+}
+
+/* Display */
+.display{
+  background: rgba(0,0,0,0.25);
+  border-radius:10px;
+  padding:14px;
+  font-size:2rem;
+  text-align:right;
+  min-height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  margin-bottom:12px;
+  color:var(--text);
+  overflow:hidden;
+}
+
+/* Keys grid */
+.keys{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
+.btn{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.03);
+  color:var(--text);
+  padding:14px;
+  font-size:1.1rem;
+  border-radius:10px;
+  cursor:pointer;
+  transition:transform .08s ease, box-shadow .12s;
+  user-select:none;
+}
+
+.btn:active{transform:translateY(2px)}
+.btn.op{color:var(--bg); background:var(--accent); font-weight:600}
+.btn.equal{grid-column:4 / 5; background: linear-gradient(180deg,#00b8eb,#00c3ff); color:var(--bg); font-weight:700}
+.btn.func{background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.02)}
+
+/* responsive smaller */
+@media (max-width:420px){
+  .display{font-size:1.6rem; min-height:56px}
+  .btn{padding:12px;font-size:1rem}
+}
